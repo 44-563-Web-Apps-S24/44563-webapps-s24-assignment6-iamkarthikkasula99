@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animal bootstart</title>
+    </head>
+    <body>
+        <h1>Animal game by Karthik Kasula </h1>
+    </body>
+    <form>
+        <label for="hidden animal" style="font-size: 100%; ">The hidden animal type: </label>
+        <input type="password" id="hidden animal" value="Chicken">
+        <br>
+    
+        <label for="Guess animal" style="font-size: 100%; ">Guess the animal: </label>
+        <input style="font-size: 100%; " type="text" id="Guess animal">
+        <br>
+        <br><button type="button" onclick="checkAnimal()" style="font-size: 100%; font-family: cursive;">
+            Check the guess</button>
+    </form>
+    <br>
+<div id="result" style="font-size: 100%;"></div>
+<script>
+    let wrong = 0;
+    let correct = 0;
+    function checkAnimal() {
+        const hiddenAnimalInput = document.getElementById('hidden animal');
+        const guessAnimalInput = document.getElementById('Guess animal');
+        const resultElement = document.getElementById('result');
+        if (hiddenAnimalInput.value === guessAnimalInput.value){
+            correct++;
+            alert("Ruff ruff");
+        } else {
+            wrong++;
+            alert("Grrrr");
+        }
+        resultElement.innerHTML = <p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>; // Update result element checked by condition using if else
+        guessAnimalInput.value = '';
+        }
+</script>
+</html>
