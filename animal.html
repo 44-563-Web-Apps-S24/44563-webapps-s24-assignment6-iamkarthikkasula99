@@ -5,36 +5,34 @@
     </head>
     <body>
         <h1>Animal game by Karthik Kasula </h1>
-        <main>
         <form>
-            <label for="form1_hiddenanimal">The hidden animal type: </label>
-            <input type="password" id="form1_hiddenanimal" value="Chicken">
+            <label for="hidden animal" style="font-size: 100%; ">The hidden animal type: </label>
+            <input type="password" id="hidden animal" value="Chicken">
             <br>
         
-            <label for="form2_Guessanimal">Guess the animal: </label>
-            <input style="font-size: 100%; " type="text" id="form2_Guessanimal">
+            <label for="Guess animal">Guess the animal: </label>
+            <input style="font-size: 100%; " type="text" id="Guess animal">
             <br>
-            <br><button type="button" onclick="checkAnimal()">
+            <br><button type="button" onclick="checkAnimal()" style="font-size: 100%; font-family: cursive;">
                 Check the guess</button>
         </form>
-    </main>
         <br>
     <div id="result" style="font-size: 100%;"></div>
     <script>
         let wrong = 0;
         let correct = 0;
         function checkAnimal() {
-            const hiddenAnimalInput1 = document.getElementById('form1_hiddenanimal');
-            const guessAnimalInput2 = document.getElementById('form2_Guessanimal');
+            const hiddenAnimalInput = document.getElementById('hidden animal');
+            const guessAnimalInput = document.getElementById('Guess animal');
             const resultElement = document.getElementById('result');
-            if (hiddenAnimalInput1.value === guessAnimalInput2.value){
+            if (hiddenAnimalInput.value === guessAnimalInput.value){
                 correct++;
                 alert("Ruff ruff");
             } else {
                 wrong++;
                 alert("Grrrr");
             }
-            resultElement.innerHTML = <p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>; // Update result element checked by condition using if else
+            resultElement.innerHTML = `<p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>`; // Update result element checked by condition using if else
             guessAnimalInput.value = '';
             }
     </script>
