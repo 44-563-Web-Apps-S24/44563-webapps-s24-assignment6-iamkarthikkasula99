@@ -5,15 +5,7 @@
     </head>
     <body>
         <h1>Animal game by Karthik Kasula </h1>
-        <form>
-            <label for="form1_age">What is your age </label>
-            <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
-        
-            <label for="form1_nick">What is your nickname </label>
-            <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
-        
-            <input type="button" onclick="resolveForm()" value="Get values from form">
-        </form>
+ 
         <form>
             <label for="hidden animal" style="font-size: 100%; ">The hidden animal type: </label>
             <input type="password" id="hidden animal" value="Chicken">
@@ -44,6 +36,33 @@
             resultElement.innerHTML = `<p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>`; // Update result element checked by condition using if else
             guessAnimalInput.value = '';
             }
+    </script>
+    </script>
+    <br>
+    <div class="images container">
+        <img id="drinks" src="Kiwi Martini.png" alt="Kiwi Martini" width="150" height="150" onclick="selectImage()">
+    </div>
+    <script>
+        let useImage = 1;
+        function selectImage(){
+        const selectsImage = document.getElementById('drinks');
+        switch(useImage){
+            case 1:
+                selectsImage.src = "Adonis.jpg";
+                useImage = 2;
+                break;
+            case 2:
+                selectsImage.src = "Kiwi Martini.png";
+                useImage = 3;
+                break;
+            case 3:
+                selectsImage.src = "Sprite.jpg";
+                useImage = 1;
+                break;
+            default:
+                break;
+        }
+    }
     </script>
 </body>
 </html>
