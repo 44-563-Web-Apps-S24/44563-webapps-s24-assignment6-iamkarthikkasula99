@@ -28,10 +28,15 @@
             const resultElement = document.getElementById('result');
             if (hiddenAnimalInput.value === guessAnimalInput.value){
                 correct++;
+                console.log(correct);
                 alert("Ruff ruff");
             } else {
                 wrong++;
+                console.log(wrong)
                 alert("Grrrr");
+            }
+            if(wrong>correct){
+            alert('sorry, too many wrong guesses.');
             }
             resultElement.innerHTML = `<p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>`; // Update result element checked by condition using if else
             guessAnimalInput.value = '';
